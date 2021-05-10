@@ -1,36 +1,40 @@
 <template>
-    <div class="header">
-        <h1>BOOLFLIX</h1>
+    <header>
+        <div class="title">
+            <h1>BoolFlix</h1>
+        </div>
         <div class="search">
             <input
-                type="search"
-                id="site-search"
-                name="netflix"
-                aria-label="Search through site content"
+                type="text"
+                placeholder="Inserisci titolo"
+                v-model="search"
             />
-
-            <button>Search</button>
+            <button @click="$emit('performSearch', search)">Cerca</button>
         </div>
-    </div>
+    </header>
 </template>
 
 <script>
 export default {
     name: 'Header',
+    data() {
+        return {
+            search: '',
+        };
+    },
 };
 </script>
 
 <style scoped lang="scss">
-.header {
+header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 20px;
     background-color: blueviolet;
-    h1,
-    .search {
-        padding: 20px;
-        input {
-            outline: none;
-        }
+    margin-bottom: 30px;
+    input {
+        outline: none;
     }
 }
 </style>
