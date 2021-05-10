@@ -24,9 +24,10 @@ export default {
 .header {
     display: flex;
     justify-content: space-between;
+    background-color: blueviolet;
     h1,
     .search {
-        padding-top: 20px;
+        padding: 20px;
         input {
             outline: none;
         }
