@@ -2,13 +2,18 @@
     <div class="lista">
         <ul v-for="(film, i) in films" :key="i">
             <li>
-                <img
-                    class="image"
-                    :src="
-                        `https://image.tmdb.org/t/p/w220_and_h330_face/${film.backdrop_path}`
-                    "
-                    alt=""
-                />
+                <div v-if="film.backdrop_path === null">
+                    <img class="backdrop" src="@/assets/no-poster.png" alt="" />
+                </div>
+                <div v-else class="cover">
+                    <img
+                        class="image"
+                        :src="
+                            `https://image.tmdb.org/t/p/w220_and_h330_face/${film.backdrop_path}`
+                        "
+                        alt=""
+                    />
+                </div>
             </li>
             <div class="text">
                 <li v-if="film.title === undefined">Titolo: {{ film.name }}</li>
@@ -74,11 +79,16 @@ export default {
 .lista {
     display: flex;
     flex-wrap: wrap;
+
     .text {
         color: #fff;
         width: 220px;
         background-color: #32323263;
         font-size: 15px;
+        position: absolute;
+        transform: translateY(-333px);
+        visibility: visible;
+        cursor: pointer;
     }
 }
 

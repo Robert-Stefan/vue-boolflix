@@ -5,6 +5,7 @@
         </div>
         <div class="search">
             <input
+                v-on:keyup.enter="$emit('performSearch', search)"
                 type="text"
                 placeholder="Inserisci titolo"
                 v-model="search"
@@ -19,7 +20,7 @@ export default {
     name: 'Header',
     data() {
         return {
-            search: 'Fantozzi',
+            search: '',
         };
     },
 };
