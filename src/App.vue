@@ -52,6 +52,8 @@ export default {
 <style lang="scss">
 body {
     font-family: sans-serif;
+    font-weight: bold;
+    background-color: #141414;
 }
 
 //Font Awesome
