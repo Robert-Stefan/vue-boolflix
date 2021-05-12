@@ -44,6 +44,7 @@ header {
     z-index: 1;
     img {
         padding-left: 20px;
+        max-width: 60%;
     }
     label {
         width: 50%;
