@@ -51,7 +51,7 @@ export default {
 
 <style lang="scss">
 body {
-    font-family: sans-serif;
+    font-family: 'Knewave', cursive;
     font-weight: bold;
     background-color: #141414;
 }

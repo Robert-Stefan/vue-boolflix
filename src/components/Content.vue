@@ -73,7 +73,8 @@ export default {
 <style lang="scss" scoped>
 .flag {
     width: 40px;
-    height: 20px;
+    height: 23px;
+    transform: translateY(5px);
     padding-left: 10px;
 }
 
@@ -101,6 +102,7 @@ export default {
             .text {
                 flex-direction: column;
                 position: absolute;
+                font-size: 17px;
                 background-color: rgba(0, 0, 0, 0.7);
                 top: 0;
                 left: 0;
@@ -114,7 +116,7 @@ export default {
                 div {
                     padding-bottom: 10px;
                     i {
-                        color: #fff;
+                        color: rgb(150, 150, 150);
                     }
                 }
             }
