@@ -65,27 +65,6 @@ header {
         &:focus,
         &:valid {
             outline: none;
-            ~ ul li {
-                @for $i from 1 through 6 {
-                    &:nth-child(#{$i}) {
-                        &::before {
-                            filter: blur(20px);
-                            transform: translate(0, -35px) rotate(-210deg);
-                        }
-                        &::after {
-                            filter: blur(0);
-                            transform: scale(1) rotate(0);
-                        }
-                    }
-                }
-                @for $i from 1 through 6 {
-                    &:nth-child(#{$i}) {
-                        &::after {
-                            transition-delay: 200ms + ($i * 200ms);
-                        }
-                    }
-                }
-            }
         }
     }
 }
