@@ -105,8 +105,6 @@ export default {
                 font-size: 17px;
                 background-color: rgba(0, 0, 0, 0.7);
                 top: 0;
-                left: 0;
-                right: 0;
                 bottom: 3px;
                 padding: 15px;
                 border-radius: 5px;
